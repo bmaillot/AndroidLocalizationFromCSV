@@ -111,7 +111,7 @@ public class AndroidLocalizator {
 						throw new RuntimeException("CSV format issue with double quotes");
 				}
 				
-				String cleanedString = part.substring( 1, part.length() - 2 );
+				String cleanedString = part.substring( 1, part.length() - 1 );
 				parts.set(i, cleanedString);
 			}
 			
