@@ -2,7 +2,8 @@ package fr.hartok.util;
 
 import java.io.BufferedWriter;
 import java.io.File;
-import java.io.FileWriter;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
@@ -86,7 +87,8 @@ public class LanguageExporter {
 	{
 		PrintWriter writer = null; 
 		try {
-			writer = new PrintWriter( new BufferedWriter( new FileWriter(filePath) ) );			
+			writer = new PrintWriter( new BufferedWriter(new OutputStreamWriter(
+					new FileOutputStream(filePath), "UTF8")) );	
 		} catch (Exception e) {
 			throw new RuntimeException(e);
 		}

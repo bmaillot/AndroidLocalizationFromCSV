@@ -27,7 +27,7 @@ public class AndroidLocalizator {
 		
 		try
 		{
-			br = new BufferedReader(new FileReader(path));
+			br = new BufferedReader(new InputStreamReader(new FileInputStream(path), "UTF8"));
 			
 			// reading tags
 			if ((line = br.readLine()) != null)
